@@ -87,7 +87,6 @@ namespace MusicLearning
                 {
                     //Retrieve our custom attribute from received type
                     var attributeValue = Attribute.GetCustomAttribute(type, typeof(Suitable)) as Suitable;
-                    //If type of the form is appropriate to media
                     if (attributeValue.CheckForAvailability(myType))
                         form = (Form)Activator.CreateInstance(type);
                 }
